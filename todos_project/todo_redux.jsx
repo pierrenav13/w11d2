@@ -4,6 +4,8 @@ import {configureStore} from "./frontend/store/store"
 import todoAction from './frontend/actions/todos_actions';
 import todosReducer from "./frontend/reducer/todo_reducer";
 import stepAction from "./frontend/actions/step_actions";
+import Root from "./frontend/components/root";
+
 
 
 document.addEventListener('DOMContentLoaded', ()=> {
@@ -13,19 +15,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
     
     window.store = store;
 
-    window.todosReducer = todosReducer;
-
-    window.receiveTodo = todoAction.receiveTodo;
-
-    window.receiveTodos = todoAction.receiveTodos;
-
-    window.removeTodo = todoAction.removeTodo;
-
-    window.receiveSteps = stepAction.receiveSteps;
-
-    window.receiveStep = stepAction.receiveStep;
-
-    window.removeStep = stepAction.removeStep;
-
-    ReactDOM.render(<h1>Todos App</h1>, content);
+    ReactDOM.render(<Root store={store}/>, content);
 })
+
+
+// window.todosReducer = todosReducer;
+
+// window.receiveTodo = todoAction.receiveTodo;
+
+// window.receiveTodos = todoAction.receiveTodos;
+
+// window.removeTodo = todoAction.removeTodo;
+
+// window.receiveSteps = stepAction.receiveSteps;
+
+// window.receiveStep = stepAction.receiveStep;
+
+// window.removeStep = stepAction.removeStep;
