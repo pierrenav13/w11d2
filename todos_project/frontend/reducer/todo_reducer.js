@@ -1,4 +1,4 @@
-// import {RECEIVE_TODOS} from "../actions/todos_actions"
+// import {RECEIVE_TODOS, RECEIVE_TODO} from "../actions/todos_actions"
 // import {RECEIVE_TODO} from "../actions/todos_actions"
 
 import todoAction from "../actions/todos_actions";
