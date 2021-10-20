@@ -14,7 +14,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
     receiveTodo: todo => dispatch(todoAction.receiveTodo(todo)),
-    removeTodo: todo => dispatch(todoAction.removeTodo(todo))
 });
 
 export default connect(
