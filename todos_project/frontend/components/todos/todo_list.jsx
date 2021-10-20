@@ -1,5 +1,7 @@
 import React from 'react';
 import TodoListItem from './todo_list_item';
+import TodoForm from './todo_form';
+import TodoFormContainer from './todo_form_container';
 
 class TodoList extends React.Component{
     constructor(props){
@@ -9,6 +11,7 @@ class TodoList extends React.Component{
     render(){
         return(
             <div>
+                <TodoFormContainer />
                 <ul>
                     {this.props.todos.map(todo => 
                         <TodoListItem key={todo.id} todo={todo} />
