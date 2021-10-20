@@ -9,11 +9,11 @@ const mapDispatchToProps = (dispatch) => ({
     receiveStep: step => dispatch(stepAction.receiveStep(step))
 })
 
-const mapStateToProps = (state, todo) => {
-    const steps = stepsByTodoId(state,  todo.id)
+const mapStateToProps = (state, todoId) => {
+    const steps = stepsByTodoId(state,  todoId)
     return {
         steps: steps,
-        todoId: todo.id
+        todoId: todoId
     }
 }
 
