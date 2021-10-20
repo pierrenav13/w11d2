@@ -5,6 +5,7 @@ import todoAction from './frontend/actions/todos_actions';
 import todosReducer from "./frontend/reducer/todo_reducer";
 import stepAction from "./frontend/actions/step_actions";
 import Root from "./frontend/components/root";
+import allTodos from './frontend/reducer/selectors';
 
 
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const store = configureStore();
     
     window.store = store;
+    window.allTodos = allTodos;
 
     ReactDOM.render(<Root store={store}/>, content);
 })
