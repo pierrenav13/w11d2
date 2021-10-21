@@ -23,3 +23,5 @@ class StepListItem extends React.Component {
     }
 
 }
+
+export default StepListItem

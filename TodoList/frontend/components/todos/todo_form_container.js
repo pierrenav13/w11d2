@@ -4,7 +4,8 @@ import todoAction from '../../actions/todos_actions';
 import TodoForm from './todo_form';
 
 const mapDispatchToProps = (dispatch) => ({
-    receiveTodo: (todo) => dispatch(todoAction.receiveTodo(todo))
+    receiveTodo: (todo) => dispatch(todoAction.receiveTodo(todo)),
+    createTodo: todo => dispatch(todoAction.createTodo(todo))
 })
 
 export default connect(null, mapDispatchToProps)(TodoForm);

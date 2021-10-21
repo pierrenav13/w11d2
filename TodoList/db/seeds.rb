@@ -25,18 +25,3 @@ ActiveRecord::Base.transaction do
 
 end
 
-$.ajax({
-  method: 'GET',
-  url: '/api/todos',
-  data: {
-      todolist: {
-          title: 'test',
-          body: 'test',
-          done: false
-      }
-  },
-  dataType: 'JSON'
-}).then(
-  todos => console.log(todos),
-  error => console.log(error)
-);

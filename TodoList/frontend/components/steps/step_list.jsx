@@ -22,3 +22,5 @@ class StepList extends React.Component {
         )
     }
 }
+
+export default StepList;

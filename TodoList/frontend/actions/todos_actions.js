@@ -1,4 +1,4 @@
-
+import * as APIUtil from '../util/todo_api_util'
 
 const todoAction = {
     RECEIVE_TODOS: "RECEIVE_TODOS",
@@ -23,6 +23,25 @@ const todoAction = {
         return {
             type: todoAction.REMOVE_TODO,
             todo,
+        }
+    },
+
+    fetchTodos: () => {
+        // debugger
+        return (dispatch) => {
+            // debugger
+            APIUtil.fetchTodos().then(todos => {
+                // debugger
+                return dispatch(todoAction.receiveTodos(todos))
+            })
+        }
+    },
+
+    createTodo: (todo) => {
+        return (dispatch) => {
+            APIUtil.createTodo(todo).then(todo => {
+                return dispatch(todoAction.receiveTodo(todo))
+            })
         }
     }
 
